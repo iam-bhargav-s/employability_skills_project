@@ -1,9 +1,9 @@
 package app;
 
-import java.util.List;
-import java.util.Scanner;
 import exceptions.InvalidServiceStatusException;
 import exceptions.JobCardNotFoundException;
+import java.util.List;
+import java.util.Scanner;
 import model.Customer;
 import model.JobCard;
 import model.SparePart;
@@ -47,7 +47,7 @@ public class Main {
                     case 7 -> viewHistory(sc, historyService);
                     case 8 -> viewJobCardDetails(sc, jobCardService);
                     case 0 -> System.out.println("Thank you for using Vehicle Service Center Management System.");
-                    default -> System.out.println("Invalid choice. Please try again.");
+                    default -> System.out.println("Invalid choice!! Try again.");
                 }
             } while (choice != 0);
         }
@@ -146,6 +146,7 @@ public class Main {
         } catch (JobCardNotFoundException e) {
             System.out.println(e.getMessage());
         }
+        //tested
     }
 
     private static void addLabourCharge(Scanner sc, BillingService service) {
