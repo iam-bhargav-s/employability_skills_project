@@ -15,16 +15,4 @@ A command-line mini project developed using Core Java.
 - `exceptions`: Custom exception classes
 - `util`: Input helper methods
 
-## Compile and run (Windows PowerShell)
-Run these commands from the project root:
-
-```powershell
-Get-ChildItem -Recurse src\main\java\*.java |
-ForEach-Object { $_.FullName } |
-Set-Content sources.txt
-
-javac -d out @sources.txt
-java -cp out app.Main
-```
-
 The program uses ArrayList for temporary in-memory storage. Records are cleared when the program exits.
