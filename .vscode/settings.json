@@ -1,5 +1,0 @@
-{
-    "code-runner.executorMap": {
-        "java": "cd /d \"$workspaceRoot\\src\\main\\java\" && javac -sourcepath \"$workspaceRoot\\src\\main\\java\" -d \"$workspaceRoot\\out\" \"$workspaceRoot\\src\\main\\java\\app\\Main.java\" && java -cp \"$workspaceRoot\\out\" app.Main"
-    }
-}
