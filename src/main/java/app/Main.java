@@ -24,18 +24,9 @@ public class Main {
         try (Scanner sc = new Scanner(System.in)) {
             int choice;
             do {
-                System.out.println("\n===== VEHICLE SERVICE CENTER MANAGEMENT =====");
-                System.out.println("1. Create Job Card");
-                System.out.println("2. View All Job Cards");
-                System.out.println("3. Update Service Status");
-                System.out.println("4. Add Spare Parts");
-                System.out.println("5. Add Labour Charge");
-                System.out.println("6. Generate Service Bill");
-                System.out.println("7. View Service History");
-                System.out.println("8. View Job Card Details");
-                System.out.println("0. Exit");
+                displayMenu();
 
-                choice = InputUtil.readInt(sc, "Enter your choice: ");
+                choice = InputUtil.readInt(sc, "Select an option (0-8): ");
 
                 switch (choice) {
                     case 1 -> createJobCard(sc, jobCardService);
@@ -51,6 +42,24 @@ public class Main {
                 }
             } while (choice != 0);
         }
+    }
+
+    private static void displayMenu() {
+        System.out.println();
+        System.out.println("+------------------------------------------------+");
+        System.out.printf("| %-46s |%n","      VEHICLE SERVICE CENTER MANAGEMENT");
+        System.out.println("+------------------------------------------------+");
+        System.out.printf("| %-46s |%n", "1  Create Job Card");
+        System.out.printf("| %-46s |%n", "2  View All Job Cards");
+        System.out.printf("| %-46s |%n", "3  Update Service Status");
+        System.out.printf("| %-46s |%n", "4  Add Spare Parts");
+        System.out.printf("| %-46s |%n", "5  Add Labour Charge");
+        System.out.printf("| %-46s |%n", "6  Generate Service Bill");
+        System.out.printf("| %-46s |%n", "7  View Service History");
+        System.out.printf("| %-46s |%n", "8  View Job Card Details");
+        System.out.println("+------------------------------------------------+");
+        System.out.printf("| %-46s |%n", "0  Exit");
+        System.out.println("+------------------------------------------------+");
     }
 
     private static void createJobCard(Scanner sc, JobCardService service) {
